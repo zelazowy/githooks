@@ -1,0 +1,9 @@
+#!/bin/sh
+# hook ma za zadanie wykryc, czy w niedodanych do gita plikach nie ma przypadkiem modeli
+
+if git status | grep 'Bundle/Model' | wc -l;
+then
+    echo 'There are some Propel models not added to git:'
+    git status | grep 'Bundle/Model'
+    exit 1
+fi
