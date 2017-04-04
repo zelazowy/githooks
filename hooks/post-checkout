@@ -1,0 +1,5 @@
+if [ "$3" = 1 ]
+then
+    printf "\033[1;31mZmienił się branch, wywal se stare logi\033[0m\n"
+fi
+
